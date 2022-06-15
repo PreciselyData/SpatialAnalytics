@@ -1,1 +1,1 @@
-# SpatialAnalytics-
+# SpatialAnalytics
