@@ -26,10 +26,7 @@ There are two deployment files to choose from that requires different resources 
 helm install spatial spatial/spatial-cloud-native --version 1.0.0-SNAPSHOT -n spatial -f gitlab-deployment-small-values.yaml -f values-jackrabbit-postgres.yaml --set global.ingress.host=af5fd6acf60f747e492756edb9726215-e6f65bc2cad48f49.elb.us-east-2.amazonaws.com
 ```
 
-After all the pods in namespace 'spatial' are in 'ready' status, launch SpatialServerManager in a browser with the URL,
+After all the pods in namespace 'spatial' are in 'ready' status, launch SpatialServerManager in a browser with the URL below. By default, the security is off, so you can login with any username/password. You should be able to browser named resources and pre-view maps.
 https://af5fd6acf60f747e492756edb9726215-e6f65bc2cad48f49.elb.us-east-2.amazonaws.com/SpatialServerManager
     
-
-By default, the security is off, so you can login with any username/password. You should be able to browser named resources and pre-view maps.
-
-The last step of the deployment is to make the final configuation. See [Configuring Your System](https://docs.precisely.com/docs/sftw/spectrum/22.1/en/webhelp/Spatial/Spatial/source/Administration/load_balancing/configurespectrum_introduction.html)
+The last step of the deployment is to make the final configuation (you can do it later). See [Configuring Your System](https://docs.precisely.com/docs/sftw/spectrum/22.1/en/webhelp/Spatial/Spatial/source/Administration/load_balancing/configurespectrum_introduction.html)
