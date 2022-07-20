@@ -1,3 +1,5 @@
+# Setup AWS CloudShell
+
 Login to AWS Management Console
 
 Ensure you are in the right Region
@@ -9,11 +11,13 @@ Verify the following utilities are available,
 $aws
 $eksctl
 
+##
 Install kubectl,
 
 $curl -o ~/bin/kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.21.2/2021-07-05/bin/linux/amd64/kubectl
 $kubectl
 
+##
 Install helm
 
 $sudo yum install openssl
