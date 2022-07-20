@@ -1,6 +1,6 @@
-![Precisely](Precisely_Logo.png "Precisely")
+![Precisely](https://github.com/PreciselyData/SpatialAnalytics/blob/Draft-1/Precisely_Logo.png "Precisely")
 
-# Getting Started - Spatial Cloud Native: AWS EKS
+#Getting Started - Spatial Cloud Native: AWS EKS
 
 ##Before starting
 
