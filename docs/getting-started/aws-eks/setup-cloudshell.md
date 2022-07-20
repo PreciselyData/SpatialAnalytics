@@ -1,4 +1,4 @@
-# Setup AWS CloudShell
+## Setup AWS CloudShell
 
 Login to AWS Management Console
 
@@ -15,8 +15,7 @@ aws
 eksctl
 ```
 
-##
-Install kubectl,
+### Install kubectl
 ```
 curl -o ~/bin/kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.21.2/2021-07-05/bin/linux/amd64/kubectl
 ```
@@ -24,8 +23,7 @@ curl -o ~/bin/kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.21.2/2021-
 kubectl
 ```
 
-##
-Install helm
+### Install helm
 
 ```
 sudo yum install openssl
