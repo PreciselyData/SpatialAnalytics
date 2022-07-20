@@ -1,9 +1,9 @@
-# Prepare EKS cluster
+## Prepare EKS cluster
 Also see AWS Document https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html
 
 Note: an EC2 based EKS cluster is used in this doc. Fargate based EKS may be used as well but it has extra steps required that are not covered here.
 
-## Create an Amazon EKS cluster
+### Create an Amazon EKS cluster
 
 It's important to choose kubernetes 1.21. Pick up a name and region for your cluster, then create the cluster with cli below (e.g. `spatial-cloud-native`, `us-east-2`). Optionally, you can specify a node type, defaut is `m5.large`.
 ```
@@ -24,7 +24,7 @@ ip-192-168-12-154.us-east-2.compute.internal   Ready    <none>   2m32s   v1.21.1
 ip-192-168-50-23.us-east-2.compute.internal    Ready    <none>   2m35s   v1.21.12-eks-5308cf7
 ```
 
-## Install Ingress Controller (nginx)
+### Install Ingress Controller (nginx)
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.0/deploy/static/provider/aws/deploy.yaml
 ```
@@ -45,7 +45,7 @@ https://af5fd6acf60f747e492756edb9726215-e6f65bc2cad48f49.elb.us-east-2.amazonaw
 ```
 
 
-## Install Amazon EFS CSI Driver
+### Install Amazon EFS CSI Driver
 
 also see https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html
 
@@ -58,7 +58,7 @@ $kubectl get pod -n kube-system
 ```
 
 
-## Create the policy for the CSI Driver.
+### Create the policy for the CSI Driver.
 
 Download the IAM policy document from GitHub. You can also view the [policy document](https://raw.githubusercontent.com/kubernetes-sigs/aws-efs-csi-driver/master/docs/iam-policy-example.json).
 ```
