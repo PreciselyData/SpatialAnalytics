@@ -27,7 +27,7 @@ helm install spatial spatial/spatial-cloud-native --version 1.0.0-SNAPSHOT -n sp
 ```
 
 After all the pods in namespace 'spatial' are in 'ready' status, launch SpatialServerManager in a browser with the URL,
-https://af5fd6acf60f747e492756edb9726215-e6f65bc2cad48f49.elb.us-east-2.amazonaws.com/SpatialServerManage
+https://af5fd6acf60f747e492756edb9726215-e6f65bc2cad48f49.elb.us-east-2.amazonaws.com/SpatialServerManager
     
 
 By default, the security is off, so you can login with any username/password. You should be able to browser named resources and pre-view maps.
