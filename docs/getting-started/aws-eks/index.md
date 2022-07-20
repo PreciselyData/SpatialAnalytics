@@ -17,11 +17,11 @@ To make it easier, this guide is based on AWS CloudShell.
 
 ## Let's start
 
-    Step 1: Setup AWS CloudShell
-    Step 2: Prepare EKS cluster
-    Step 3: Setup EFS File shares
-    Step 4: Prepare database for repository
-    Step 5: Deploy spatial services using helm charts
-    Step 6: Enabling security - AuthN/AuthZ 
+- Step 1: [Setup AWS CloudShell](setup-aws-cloudshell.md)
+- Step 2: [Prepare EKS cluster](prepare-eks-cluster.md)
+- Step 3: [Setup EFS File shares](setup-efs-file-shares.md)
+- Step 4: [Prepare database for repository](prepare-repository-database.md)
+- Step 5: [Deploy spatial services using helm charts](deploy-spatial-services.md)
+- Step 6: [Enabling security - AuthN/AuthZ](enable-security.md)
 
 
