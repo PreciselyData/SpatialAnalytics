@@ -1,0 +1,6 @@
+jackrabbit:
+  database:
+    id: "postgres"
+    url: "jdbc:postgresql://postgis:5432/jackrabbit_db?currentSchema=public"
+    user: "jackrabbit_user"
+    password: "jackrabbit_user"

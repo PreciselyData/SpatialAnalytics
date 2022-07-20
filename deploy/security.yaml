@@ -1,0 +1,6 @@
+security:
+  enabled: "true"
+  oauth2:
+    issuerUri: "http://keycloak-discovery.keycloak.svc.cluster.local:8080/auth/realms/Precisely"
+    clientId: "spatial"
+    clientSecret: "fd17bc1d-cefc-41a3-8c50-bb545736caa6"
