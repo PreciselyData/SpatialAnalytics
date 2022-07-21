@@ -6,7 +6,7 @@ Also see https://docs.aws.amazon.com/efs/latest/ug/creating-using-create-fs.html
 
 ### Create EFS file system
 
-Go to `EFS` (https://`<your region>`.console.aws.amazon.com/efs/home) and create an EFS. Write down the `file-system-Id` for further use (e.g. `fs-0a8838e5f81aa5cb3`)
+Go to `EFS` (https://`<your region>`.console.aws.amazon.com/efs/home) > `File systems`, making ensure it's in the same region with the EKS cluster, then create an EFS file system. Write down the `file-system-Id` for further use (e.g. `fs-0a8838e5f81aa5cb3`).
 
 ### Allow NFS traffic into EFS
 
