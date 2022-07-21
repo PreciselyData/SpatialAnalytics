@@ -6,21 +6,32 @@ Ensure you are in the right Region
 
 Open CloudShell by clicking on the icon on the tool bar
 
-Verify the following utilities are available,
+Verify and install the following utilities,
 
 ```
-aws
+aws -h
 ```
 ```
-eksctl
+eksctl -h
+```
+```
+kubectl -h
 ```
 
 ### Install kubectl
 ```
+mkdir ~/bin
+```
+```
 curl -o ~/bin/kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.21.2/2021-07-05/bin/linux/amd64/kubectl
 ```
 ```
-kubectl
+kubectl -h
+```
+
+### Insall eksctl
+```
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C ~/bin
 ```
 
 ### Install helm
@@ -41,7 +52,11 @@ chmod 700 get_helm.sh
 cp /usr/local/bin/helm ~/bin
 ```
 ```
-helm
+helm -h
 ```
 
+### Clone Getting Started resources
+```
+git clone https://github.com/PreciselyData/SpatialAnalytics.git
+```
 

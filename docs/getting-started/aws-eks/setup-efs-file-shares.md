@@ -6,7 +6,7 @@ Also see https://docs.aws.amazon.com/efs/latest/ug/creating-using-create-fs.html
 
 ### Create EFS file system
 
-Go to https://us-east-2.console.aws.amazon.com/efs/home and create an EFS. Write down the `file-system-Id` for further use (e.g. `fs-0a8838e5f81aa5cb3`)
+Go to `EFS` (https://`<your region>`.console.aws.amazon.com/efs/home) > `File systems`, making ensure it's in the same region with the EKS cluster, then create an EFS file system. Write down the `file-system-Id` for further use (e.g. `fs-0a8838e5f81aa5cb3`).
 
 ### Allow NFS traffic into EFS
 
@@ -14,7 +14,7 @@ Check the security group of the EFS if the NFS traffic is allowed for inbound.
 
 Go to the EFS you created > `Network` > `Security groups`, write down the group id.
 
-Go to `EC2` (https://us-east-2.console.aws.amazon.com/ec2) > `Network & Security` > `Security Groups`, find the group you written down above > `Inbound rules`, add a rule if needed. You can have more restrict rule but ensure all EKS nodes should allow to access.
+Go to `EC2` (https://`<your region>`.console.aws.amazon.com/ec2) > `Network & Security` > `Security Groups`, find the group you written down above > `Inbound rules`, add a rule if needed. You can have more restrict rule but ensure all EKS nodes should allow to access.
 ```
 IP version	Type	Protocol	Port range	Source
 IPv4		NFS	TCP		2049		0.0.0.0/0

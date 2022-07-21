@@ -54,7 +54,7 @@ kubectl apply -k "github.com/kubernetes-sigs/aws-efs-csi-driver/deploy/kubernete
 ```
 You should see few efs-csi-* pods up and running.
 ```
-$kubectl get pod -n kube-system
+kubectl get pod -n kube-system
 ```
 
 
