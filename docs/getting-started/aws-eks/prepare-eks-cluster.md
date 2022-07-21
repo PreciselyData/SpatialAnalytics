@@ -58,7 +58,7 @@ kubectl get pod -n kube-system
 ```
 
 
-### Create the policy for the CSI Driver.
+### Create the policy for the CSI Driver and attach it to the node group role.
 
 Download the IAM policy document from GitHub. You can also view the [policy document](https://raw.githubusercontent.com/kubernetes-sigs/aws-efs-csi-driver/master/docs/iam-policy-example.json).
 ```
