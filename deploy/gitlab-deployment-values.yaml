@@ -14,6 +14,7 @@ feature-service:
   limitCPU: "4"
   limitMemory: "2G"
   initReplicaCount: 1
+  maxReplicaCount: 1
   hpaEnabled: false
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/feature-service
@@ -26,6 +27,7 @@ mapping-service:
   limitCPU: "4"
   limitMemory: "2G"
   initReplicaCount: 1
+  maxReplicaCount: 1
   hpaEnabled: false
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/mapping-service
@@ -38,6 +40,7 @@ namedresource-service:
   limitCPU: "4"
   limitMemory: "2G"
   initReplicaCount: 1
+  maxReplicaCount: 1
   hpaEnabled: false
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/namedresource-service
@@ -50,6 +53,7 @@ tiling-service:
   limitCPU: "4"
   limitMemory: "2G"
   initReplicaCount: 1
+  maxReplicaCount: 1
   hpaEnabled: false
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/tiling-service
