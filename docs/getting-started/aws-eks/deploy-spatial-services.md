@@ -21,7 +21,7 @@ kubectl -n spatial create secret docker-registry regcred-gitlab --docker-server=
 
 ### Deploy Spatial Services
 
-There are two deployment files to choose from that requires different resources (CPU and Memory). Start from the small one (`gitlab-deployment-small-values.yaml`). If you use your external Postgres Database, update the information in the manifest file `values-jackrabbit-postgres.yaml`. The value of the `global.ingress.host` is the Ingress External IP.
+There are two deployment files to choose from that require different amount of resources (CPU and Memory). Start from the small one (`~/SpatialAnalytics/deploy/gitlab-deployment-small-values.yaml`). A production deployment should use `~/SpatialAnalytics/deploy/gitlab-deployment-values.yaml`. If you use your external Postgres Database, update the information in the manifest file `~/SpatialAnalytics/deploy/values-jackrabbit-postgres.yaml`. The value of the `global.ingress.host` is the Ingress External IP.
 ```
 helm install spatial spatial/spatial-cloud-native --version 1.0.0-SNAPSHOT -n spatial -f ~/SpatialAnalytics/deploy/gitlab-deployment-small-values.yaml -f ~/SpatialAnalytics/deploy/values-jackrabbit-postgres.yaml --set global.ingress.host=<your external ip>
 ```
