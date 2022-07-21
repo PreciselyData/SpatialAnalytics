@@ -20,7 +20,7 @@ e.g. `af5fd6acf60f747e492756edb9726215-e6f65bc2cad48f48.elb.us-east-2.amazonaws.
 
 ### Deploy keycloak by helm chart
 ```
-helm install keycloak spatial/keycloak-service --version 1.0.0-SNAPSHOT -n keycloak --set ingress.host=af5fd6acf60f747e492756edb9726215-e6f65bc2cad48f48.elb.us-east-2.amazonaws.com
+helm install keycloak spatial/keycloak-service --version 1.0.0-SNAPSHOT -n keycloak --set ingress.host=<your external ip>
 ```
 Wait until `keycloak-0` pod in `keycloak` namespace is up and ready (`kubectl get pod -n keycloak`)
 
@@ -38,13 +38,13 @@ kubectl -n keycloak get secret credential-spatial-keycloak -o=jsonpath="{.data.A
 The output should look like `V4YAGs76OzGMvA==`
     
 Open a browser and login to keycloak console with the admin credentials at
-https://af5fd6acf60f747e492756edb9726215-e6f65bc2cad48f48.elb.us-east-2.amazonaws.com/auth/admin
+`https://<your external ip>/auth/admin`
 
 
 ### Create a realm for spatial services
 
-Import `realm-spatial.json` to create the realm.
-In administration console, move cursor over the `Master` realm and click on `Add realm`
+Download `~//realm-spatial.json` to your local system and open a browser to login to Keycloak administration console.
+In the administration console, move the cursor over the `Master` realm and click on `Add realm`
 
 Select the realm file `realm-spatial.json`, give a name to the new realm (use all lowercase name, e.g. `development`) and click the `Create`.
 
@@ -66,7 +66,7 @@ spring.security.oauth2.client.provider.keycloak.issuer-uri: "http://keycloak-dis
 ...
 ```
 
-Restart all services to pick up the config
+Restart all services to pick up the configuration changes
 ```
 $kubectl rollout restart deployment -n spatial
 ```
@@ -75,7 +75,7 @@ Wait for all pods are ready
 $kubectl get pod -n spatial
 ```
 
-Login to Spatial Manager when all services are ready. Initial password for admin is `Spatialadmin0`
-https://af5fd6acf60f747e492756edb9726215-e6f65bc2cad48f48.elb.us-east-2.amazonaws.com/SpatialServerManager
+Login to Spatial Manager when all services are ready. Initial password for `admin` is `Spatialadmin0`
+`https://<your external ip>/SpatialServerManager`
 
 Verify if you can preview a map in Spatial Manager.
