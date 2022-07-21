@@ -2,7 +2,7 @@
 
 ### Create a StorageClass for EFS Driver
 
-find the template file `efs-sc.yaml` and update it with the file system id of your EFS file system
+find the template file `~/SpatialAnalytics/deploy/aws-eks/efs-sc.yaml` and update it with the file system id of your EFS file system
 
 ```
 ...
@@ -10,7 +10,7 @@ fileSystemId: fs-0a8838e5f81aa5cb3
 ...
 ```
 ```
-kubectl apply -f ./efs-sc.yaml
+kubectl apply -f ~/SpatialAnalytics/deploy/aws-eks/efs-sc.yaml
 ```
 Check the results
 ```
@@ -31,7 +31,7 @@ kubectl create ns spatial
 
 Create a PVC in the namespace that dynamically provisioning using efs-sc storage class,
 ```
-kubectl apply -f ./pvc.yaml -n spatial
+kubectl apply -f ~/SpatialAnalytics/deploy/aws-eks/pvc.yaml -n spatial
 ```
 Check results, wait until the pvc status becomes `Bound`.
 ```
