@@ -43,7 +43,7 @@ Open a browser and login to keycloak console with the admin credentials at
 
 ### Create a realm for spatial services
 
-Download `~//realm-spatial.json` to your local system and open a browser to login to Keycloak administration console.
+Download `~/SpatialAnalytics/deploy/realm-spatial.json` to your local system.
 In the administration console, move the cursor over the `Master` realm and click on `Add realm`
 
 Select the realm file `realm-spatial.json`, give a name to the new realm (use all lowercase name, e.g. `development`) and click the `Create`.
@@ -68,14 +68,15 @@ spring.security.oauth2.client.provider.keycloak.issuer-uri: "http://keycloak-dis
 
 Restart all services to pick up the configuration changes
 ```
-$kubectl rollout restart deployment -n spatial
+kubectl rollout restart deployment -n spatial
 ```
 Wait for all pods are ready
 ```
-$kubectl get pod -n spatial
+kubectl get pod -n spatial
 ```
 
 Login to Spatial Manager when all services are ready. Initial password for `admin` is `Spatialadmin0`
+
 `https://<your external ip>/SpatialServerManager`
 
 Verify if you can preview a map in Spatial Manager.
