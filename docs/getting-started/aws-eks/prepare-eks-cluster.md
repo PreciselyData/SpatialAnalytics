@@ -79,3 +79,14 @@ At this point, the EKS cluster is ready for use. After the try, you can delete t
 ```
 eksctl delete cluster --name <cluster name> --region <your region>
 ```
+
+### Allow NFS traffic into EKS cluster
+
+Check the security groups used by the EKS cluster if the NFS traffic is allowed for inbound. 
+
+Go to the EKS cluster you created > `Networking` > `Cluster security groups`, click the group id > `Inbound rules`, add allow NFS traffic rule. You can have more restrict rule but ensure that all EKS nodes should allow to access. Do the same to the security group under `Networking` > `Additional security groups`.
+```
+IP version	Type	Protocol	Port range	Source
+IPv4		NFS	TCP		2049		0.0.0.0/0
+```
+Note: If the cluster (nodes) can't access the EFS file system, spatial service pods will not be able to mount the volume and will stuck on pod creation status. Describe the pod to find out more detailed information.
