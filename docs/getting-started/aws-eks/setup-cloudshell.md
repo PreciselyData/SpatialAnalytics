@@ -60,3 +60,5 @@ helm -h
 git clone https://github.com/PreciselyData/SpatialAnalytics.git
 ```
 
+
+### [Next Step](prepare-eks-cluster.md)
