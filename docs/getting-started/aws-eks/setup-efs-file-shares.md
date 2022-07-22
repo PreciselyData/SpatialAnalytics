@@ -19,3 +19,5 @@ Go to `EC2` (https://`<your region>`.console.aws.amazon.com/ec2) > `Network & Se
 IP version	Type	Protocol	Port range	Source
 IPv4		NFS	TCP		2049		0.0.0.0/0
 ```
+
+### [Next Step](create-pv-pvc.md)
