@@ -84,7 +84,7 @@ eksctl delete cluster --name <cluster name> --region <your region>
 
 Check the security groups used by the EKS cluster if the NFS traffic is allowed for inbound. 
 
-Go to the EKS cluster you created > `Networking` > `Cluster security groups`, click the group id > `Inbound rules`, add allow NFS traffic rule. You can have more restrict rule but ensure that all EKS nodes should allow to access. Do the same to the security group under `Networking` > `Additional security groups`.
+Go to the EKS cluster you created > `Networking` > `Cluster security groups`, click the group id > `Inbound rules` > `Edit inbound rules` > `Add rule`, select `Type` as `NFS`, `Source` as `Anywhere-IPv4`, like shown below. Add allow NFS traffic rule. You can have more restrict rule but ensure that all EKS nodes should allow to access. Do the same to the security group under `Networking` > `Additional security groups`.
 ```
 IP version	Type	Protocol	Port range	Source
 IPv4		NFS	TCP		2049		0.0.0.0/0
