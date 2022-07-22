@@ -38,3 +38,4 @@ Check results, wait until the pvc status becomes `Bound`.
 kubectl get pvc -n spatial
 ```
 
+### [Next Step](prepare-repository-database.md)
