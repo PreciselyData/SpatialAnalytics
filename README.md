@@ -5,7 +5,7 @@ Spatial Analytics is the name for our existing Spectrum Spatial product, designe
 
 ## Benefits of cloud native deployment
 ### Flexibility of deployment
-Spatial services are delivered as separate microservices in multiple Kubernetes pods suing container-based delivery. Containers are orchestrated by Kubernetes with efficient distribution of workloads across a cluster of computers.
+Spatial services are delivered as separate microservices in multiple Kubernetes pods using container-based delivery. Containers are orchestrated by Kubernetes with efficient distribution of workloads across a cluster of computers.
 
 ### Elastic scaling and clustering
 Scale according to use cases (for example environments can scale up for overnight tile caching, scale up to meet application usage during the day). Autoscaling or manual scaling via command line or K8s dashboard. Major APIs such as Mapping, Tiling and Feature services can be separately scaled to match requirements.
