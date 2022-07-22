@@ -62,7 +62,7 @@ oauth2.enabled: "true"
 oauth2.issuer-uri: "http://keycloak-discovery.keycloak.svc.cluster.local:8080/auth/realms/<your realm name>"
 oauth2.client-id: "spatial"
 oauth2.client-secret: "fd17bc1d-cefc-41a3-8c50-bb545736caa6"
-spring.security.oauth2.client.provider.keycloak.issuer-uri: "http://keycloak-discovery.keycloak.svc.cluster.local:8080/auth/realms/<your realm name>"
+spring.security.oauth2.resourceserver.jwt.issuer-uri: "http://keycloak-discovery.keycloak.svc.cluster.local:8080/auth/realms/<your realm name>"
 ...
 ```
 
