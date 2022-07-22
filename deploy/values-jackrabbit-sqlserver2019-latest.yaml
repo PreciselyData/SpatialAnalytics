@@ -1,0 +1,6 @@
+jackrabbit:
+  database:
+    id: "mssql"
+    url: "jdbc:sqlserver://sqlserver2019-latest:1433;selectMethod=cursor;authentication=SqlPassword;encrypt=false;trustServerCertificate=true"
+    user: "sa"
+    password: "JavaRocks90!"
