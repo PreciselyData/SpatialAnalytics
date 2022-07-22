@@ -30,3 +30,6 @@ After all the pods in namespace 'spatial' are in 'ready' status, launch SpatialS
 `https://<your external ip>/SpatialServerManager`
     
 The last step of the deployment is to make the final configuation (you can do it later). See [Configuring Your System](https://docs.precisely.com/docs/sftw/spectrum/22.1/en/webhelp/Spatial/Spatial/source/Administration/load_balancing/configurespectrum_introduction.html)
+
+
+### [Next Step](enable-security.md)
