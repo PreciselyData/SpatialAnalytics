@@ -29,7 +29,7 @@ We will deploy spatial services into a new namespace 'spatial', so create the na
 kubectl create ns spatial
 ```
 
-Create a PVC in the namespace that dynamically provisioning using efs-sc storage class,
+Create a PVC in the namespace that dynamically provisioning a PV using efs-sc storage class,
 ```
 kubectl apply -f ~/SpatialAnalytics/deploy/aws-eks/pvc.yaml -n spatial
 ```
