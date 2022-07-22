@@ -90,3 +90,6 @@ IP version	Type	Protocol	Port range	Source
 IPv4		NFS	TCP		2049		0.0.0.0/0
 ```
 Note: If the cluster (nodes) can't access the EFS file system, spatial service pods will not be able to mount the volume and will stuck on pod creation status. Describe the pod to find out more detailed information.
+
+
+### [Next Step](setup-efs-file-shares.md)
