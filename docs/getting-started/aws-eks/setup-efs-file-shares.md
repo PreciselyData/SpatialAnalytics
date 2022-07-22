@@ -14,7 +14,7 @@ Check the security group of the EFS if the NFS traffic is allowed for inbound.
 
 Go to the EFS you created > `Network` > `Security groups`, write down the group id.
 
-Go to `EC2` (https://`<your region>`.console.aws.amazon.com/ec2) > `Network & Security` > `Security Groups`, find the group you written down above > `Inbound rules`, add a rule if needed. You can have more restrict rule but ensure all EKS nodes should allow to access.
+Go to `EC2` (https://`<your region>`.console.aws.amazon.com/ec2) > `Network & Security` > `Security Groups`, find the group you written down above > `Inbound rules` > `Edit inbound rules` > `Add rule`, select `Type` as `NFS`, `Source` as `Anywhere-IPv4`, like shown below. You can have more restrict rule but ensure all EKS nodes should allow to access.
 ```
 IP version	Type	Protocol	Port range	Source
 IPv4		NFS	TCP		2049		0.0.0.0/0
