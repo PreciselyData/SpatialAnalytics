@@ -10,7 +10,7 @@ Make sure you have the following items before starting:
 
 It is recommended to use a single Azure subscription to complete this
 tutorial. To make it easier, this tutorial is based on Azure portal and
-Azure Cloud Shell (Bash). There's nothing you need to per-install on
+Azure Cloud Shell (Bash). There's nothing you need to pre-install on
 your PC except pgAdmin4 and WebDAV client. In order to achieve the best
 performance, try to create all resources in the same region. Some of the
 tasks in the document are simplified for easy starting, so it's not
