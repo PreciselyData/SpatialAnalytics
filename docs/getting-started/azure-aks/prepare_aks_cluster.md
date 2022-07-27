@@ -37,7 +37,7 @@ In Azure portal, Create → Create a Kubernetes Cluster
 
 
 ### Specify information for cluster
-![create aks-details](images/create-kubernetes-services-2.PNG "create aks-details")
+![create aks-details](images/create-kubernetes-services-2.png "create aks-details")
 
 
 Create a new Resource group `spatial-aks` for this AKS cluster
