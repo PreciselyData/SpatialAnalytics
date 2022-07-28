@@ -138,7 +138,12 @@ aks-agentpool-39271417-vmss000000   Ready    agent   106s   v1.21.14
 \
 \
 
-###  2.3 Install Ingress-NGINX controller {#Step2:PrepareAKScluster-2.3InstallIngress-NGINXcontroller}
+###  2.3 Install Ingress-NGINX controller
+
+---
+**NOTE** If you would like to setup TLS for HTTPS traffic follow official azure docs: https://docs.microsoft.com/en-us/azure/aks/ingress-tls?tabs=azure-cli
+
+---
 
 \
 In the Cloud Shell,
