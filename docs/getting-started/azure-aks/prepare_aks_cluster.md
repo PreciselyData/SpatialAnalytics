@@ -134,9 +134,6 @@ NAME                                STATUS   ROLES   AGE    VERSION
 aks-agentpool-39271417-vmss000000   Ready    agent   106s   v1.21.14
 ```
 
-\
-\
-\
 
 ###  2.3 Install Ingress-NGINX controller
 
