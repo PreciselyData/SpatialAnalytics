@@ -45,7 +45,7 @@ regcred-gitlab                  kubernetes.io/dockerconfigjson        1      19h
 sh.helm.release.v1.spatial.v1   helm.sh/release.v1                    1      3m24s
 ```
 
-\
+
 
 ##  Deploy Spatial-Cloud-Native Helm chart
 
