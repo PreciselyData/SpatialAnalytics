@@ -40,8 +40,7 @@ $az feature show -name AllowNfsFileShares --namespace Microsoft.Storage --subscr
 }
 ```
 
-\
-\
+
 
 ### 3.2 Create a Storage Account for Fileshares
 
