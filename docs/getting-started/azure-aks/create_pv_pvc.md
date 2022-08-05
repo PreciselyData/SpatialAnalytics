@@ -75,7 +75,7 @@ NAME          CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STO
 data-volume   100Gi      RWX            Retain           Available                                   13s
 ```
 
-\
+
 
 ### Create PVC from the Fileshares PV
 
