@@ -6,6 +6,11 @@ fine. Here are a few sample requests for your convenience. To access
 services, use the load balancer external IP address obtained in section
 2.3.
 
+---
+**NOTE** Depending on deplyment URL prefix maybe https or http
+
+---
+
 | Service | URL                                                                                                                                                  |
 | ------- |------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spatial Manager | http://\<external-IP\>/SpatialServerManager                                                                                                          |

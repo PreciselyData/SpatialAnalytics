@@ -22,7 +22,7 @@ Server → Create new (or select existing server)
         deployment for performance i.e. (US) East US
     -   Authentication method → Use SQL authentication
     -   Server admin login → spatial
-    -   Password → Mapinfo123 (password can be set to anything)
+    -   Password → Default123 (password can be set to anything)
 
 
 
@@ -60,9 +60,9 @@ we will use the following JDBC information to do the deployment in later steps i
 jackrabbit:
   database:
     id: "mssql"
-    url: "jdbc:sqlserver://spatialsqlserver.database.windows.net:1433;selectMethod=cursor;authentication=SqlPassword;encrypt=false;trustServerCertificate=true"
+    url: "jdbc:sqlserver://spatialsqlserver.database.windows.net:1433;selectMethod=cursor;authentication=SqlPassword;Database=spatial;encrypt=false;trustServerCertificate=true"
     user: "spatial@spatialsqlserver"
-    password: "Mapinfo123"
+    password: "Default123"
 ```
 
 ---

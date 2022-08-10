@@ -17,8 +17,9 @@ To achieve the best performance, try to keep the database instance in the same r
 
 
 In Azure portal, Create a resource → Databases → Azure Database for
-PostgreSQL → Single server\
-
+PostgreSQL → Single server
+\
+\
 Select single server → Create\
 Resource group → Create new → spatial-postgis\
 Server name → postgis001\

@@ -7,7 +7,7 @@ git clone https://github.com/PreciselyData/SpatialAnalytics.git
 ```
 
 ```shell
-cd SpatialAnalytics/deploy/aws-aks
+cd SpatialAnalytics/deploy/azure-aks
 ```
 
 
@@ -58,7 +58,7 @@ spec:
 ```
 
 In Cloud Shell, create the PV from the template file (making sure your
-current directory is `SpatialAnalytics/deploy/aws-aks`)
+current directory is `SpatialAnalytics/deploy/azure-aks`)
 
 ```shell
 kubectl apply -f fileshare-pv.yaml

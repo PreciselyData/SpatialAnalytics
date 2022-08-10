@@ -55,7 +55,6 @@ Select Premium account type → `File shares`
 
 Advanced → Security → Require secure transfer for REST API operations
 to allow HTTP → `Uncheck`\
-
 Click -> `Review + Create`\
 Click -> `Create`
 
@@ -64,8 +63,6 @@ Click -> `Create`
 \
 In Azure portal, go to spatial-fileshares → spatialstorage001, select
 Networking,\
-
-
 ![storage aks networking](images/storage-connect-aks-network1.png "storage aks networking")
 
 
@@ -82,7 +79,7 @@ Save ...
 In Azure portal, go to
 
 Home -> Resource Group -> spatial-fileshares ->
-spatialstorage001 -> File Service
+spatialstorage001 -> File shares
 
 ![Create File Shares](images/fileshare-create.PNG "Create File Shares")
 

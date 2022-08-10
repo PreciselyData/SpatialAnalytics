@@ -53,7 +53,7 @@ In Cloud Shell, replace the postgres credentials in the command below if
 it's different (making sure your current directory is `SpatialAnalytics/deploy`)
 
 ```shell
-cd {location where }/SpatialAnalytics/deploy
+cd ~/SpatialAnalytics/deploy
 ```
 #### Get nginx ingress IP for deployment
 ```shell
@@ -101,9 +101,9 @@ Also, make sure server info matches the server info based on setup.
 jackrabbit:
   database:
     id: "mssql"
-    url: "jdbc:sqlserver://spatialsqlserver.database.windows.net:1433;selectMethod=cursor;authentication=SqlPassword;encrypt=false;trustServerCertificate=true"
+    url: "jdbc:sqlserver://spatialsqlserver.database.windows.net:1433;selectMethod=cursor;authentication=SqlPassword;Database=spatial;encrypt=false;trustServerCertificate=true"
     user: "spatial@spatialsqlserver"
-    password: "Mapinfo123"
+    password: "Default123"
 ```
 
 ```shell

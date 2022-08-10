@@ -125,7 +125,7 @@ Console. [https://www.keycloak.org/docs/latest/server_admin/](https://www.keyclo
 Update service config to use the keycloak
 
 ```shell
-kubectl edit cm spatial-config -n spatial
+kubectl edit cm spatial-config
 ```
 
 URL `http://23-96-127-58.nip.io` is formed using the external IP for ingress.
@@ -142,18 +142,23 @@ spring.security.oauth2.resourceserver.jwt.issuer-uri: "http://23-96-127-58.nip.i
 Restart all services to pick up the config
 
 ```shell
-kubectl rollout restart deployment -n spatial
+kubectl rollout restart deployment
 ```
 
 ```shell
-kubectl get pod -n spatial
+kubectl get pod
 ```
 
 Login to Spatial Manager when all services are ready. Initial password
 for admin is `Spatialadmin0`. Also, update the URL based on ingress external IP.
-\
-\
-[https://23-96-127-58.nip.io/SpatialServerManager](https://23-96-127-58.nip.io/SpatialServerManager)
+
+
+---
+**NOTE** Verify Spatial Manager with keycloack
+
+[https://\<external-ip>/SpatialServerManager](https://\<external-ip>/SpatialServerManager)
+
+---
 
 Verify if you can preview a map in Spatial Manager.
 \
