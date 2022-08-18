@@ -2,7 +2,7 @@
 
 
 By default, Azure File shares use SMB protocol that doesn't perform
-well with Spatial-Cloud-Native deployment. We recommend the NFS protocol
+well with Spatial-Cloud-Native deployment. We recommend the NFS protocol.
 
 Also, see:\
 [https://docs.microsoft.com/en-us/azure/cloud-shell/overview](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-scale-targets)\

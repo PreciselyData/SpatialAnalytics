@@ -154,7 +154,7 @@ for admin is `Spatialadmin0`. Also, update the URL based on ingress external IP.
 
 
 ---
-**NOTE** Verify Spatial Manager with keycloack
+**NOTE** Verify Spatial Manager with keycloak
 
 [https://\<external-ip>/SpatialServerManager](https://\<external-ip>/SpatialServerManager)
 

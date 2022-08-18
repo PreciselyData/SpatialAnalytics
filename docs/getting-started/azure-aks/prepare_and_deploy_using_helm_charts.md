@@ -129,7 +129,7 @@ auto-scaling by enabling HPA settings in
 `gitlab-deployment-values.yaml`. You can also make more customization to
 the deployment. Updating the manifest file
 `gitlab-deployment-values.yaml` from your disk of Cloud Shell, click
-\'{}\' to open the editor,
+\'{}\' to open the editor.
 \
 \
 \
