@@ -31,3 +31,5 @@ recommended for any serious deployment.
 ### [Step 6: Verify Deployment](verify_deployment.md)
 
 ### [Step 7: Enabling security AKS AuthN/AuthZ](Enabling_security_AKS___AuthN_AuthZ.md)
+
+### [Step 8: Spatial Utilities](../spatial-utilities.md)

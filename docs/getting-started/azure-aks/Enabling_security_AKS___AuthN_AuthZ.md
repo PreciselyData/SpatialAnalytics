@@ -167,3 +167,4 @@ Verify if you can preview a map in Spatial Manager.
 NAVIGATION:
 
 - [Getting Started - Spatial Cloud Native: Azure AKS](README.md)
+- [Next Step -> Step 8: Spatial Utilities](../spatial-utilities.md)
