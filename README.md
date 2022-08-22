@@ -1,6 +1,6 @@
-<h1 style="text-align:center;">Spatial Analytics</h1>
+<h1 align="center">Spatial Analytics</h1>
 
-<p style="text-align:center;">
+<p align="center">
   <img src="Precisely_Logo.png" alt="precisely-logo"/>
   <br>
   <i>Spatial Analytics is the name for our existing Spectrum Spatial product, designed to deploy to 
@@ -8,7 +8,7 @@
   <br>
 </p>
 
-<p style="text-align:center;">
+<p align="center">
   <a href="https://www.precisely.com"><strong>www.precisely.com</strong></a>
   <br>
 </p>
