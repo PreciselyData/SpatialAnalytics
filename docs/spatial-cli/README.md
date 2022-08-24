@@ -7,7 +7,7 @@ Download and install the Spatial CLI from the [release](https://github.com/Preci
 The CLI Utility requires Java 11. Verify that Java 11 is in the system PATH variable before running the Spatial CLI Utility.
 
 ---
-After downloading CLI utility from the respective link kindly follow the steps mentioned below.
+After downloading CLI utility kindly follow the steps mentioned below.
 
 1. Extract the contents of the zip file.
 2. Extracted content will have two directories i.e., ***bin*** and ***lib*** at root. ***lib*** directory contains necessary jar dependencies for execution and ***bin*** directory contains two files, one for Windows system and other one for Linux system.
@@ -32,7 +32,7 @@ connect --h servername:port --u username --p password --s SSLTrueOrFalse
 | --h       | servername:port                                                                                                         |
 | --u       | username that has access to connect to the spatial server                                                               |
 | --p       | password for the user                                                                                                   |
-| --s       | `true` if want to use secured HTTPS connection. `false` for HTTP<br> see: [Enabling HTTPS for CLI](#Enabling-HTTPS-for-CLI) |
+| --s       | `true` if want to use secured HTTPS connection. See: [Enabling HTTPS for CLI](#Enabling-HTTPS-for-CLI) <br>`false` for HTTP. |
 
 ```shell
 connect --h myserver:8080 --u admin --p myPassword1 --s false
@@ -176,7 +176,7 @@ Above mentioned instruction for flag needs to be followed for all the given flag
 ---
 #### Current Limitation of CLI Utility
 
-In Windows system backward single slash `\` doesn't work in the **import** command for example `limrepo import --s C:\myrepository\samples` will throw an error of path not found. So either we have to provide forward slashes i.e.  `/` in between the path or provide double backward slashes `\\`
+In Windows system backward single slash `\` doesn't work in **import** command. For example: `limrepo import --s C:\myrepository\samples` will throw an error of path not found. So either we have to provide forward slashes i.e.  `/` in between the path or provide double backward slashes `\\`
 
 **Here are few examples**
 
