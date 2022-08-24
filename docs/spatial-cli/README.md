@@ -1,6 +1,6 @@
 # Install the Spatial CLI Utility
 
-Download and install the Spatial CLI from the [release](https://github.com/PreciselyData/SpatialAnalytics/releases). This topic also describes how to connect to the Spatial Server cloud.
+Latest version of the Spatial CLI Utility can be downloaded from the [release](https://github.com/PreciselyData/SpatialAnalytics/releases) section of the github repository. This topic also describes how to connect to the Spatial Server cloud.
 
 ---
 **Note:**\
