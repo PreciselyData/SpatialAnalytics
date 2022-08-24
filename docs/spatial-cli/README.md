@@ -148,12 +148,12 @@ This is very basic example of this command with required parameters to execute t
 |--u or --update|No|Specifies whether to overwrite existing resources if resources with the same name already exists on the server.<br>If the flag is not specified, then the default value is true.<br>If flag is specified then we must supply the value to be true or false otherwise error will be thrown.<br>Example if --u is specified then complete values should be **--u true** or **--u false**. Otherwise, error will be thrown in command line.  |
 |--f or --fullpaths|No| Prints the full source and output paths.<br>If the flag is not specified, then the default value is false.<br>If flag is specified then we must supply the value to be true or false otherwise error will be thrown.<br>Example if flag --f is specified then complete passed parameters should be **--f true** or **--f false**. Otherwise, error will be thrown in command line.  |
 |--c or --continueonerror|No| Continues with the import if an error occurs.<br>If the flag is not specified, then the default value is false.<br>If flag is specified then we must supply the value to be true or false otherwise error will be thrown.<br>Example if flag --c is specified then complete passed parameters should be **--c true** or **--c false**. Otherwise, error will be thrown in command line.  |
-|--a or --acl| No |Preserves any previously exported permissions and merges them with existing permissions when importing resources. An access control list (ACL) indicates the operations each user or role can perform on a named resource, such as create, view, modify, or delete.<br>For example, a user has read and write permissions on a resource when exporting. If the user only has read permissions on the resource when importing, write permission will be granted again after the import finishes successfully.<br>Conflicting permissions cannot be merged and will be ignored. ACL entries for users and roles that do not exist in the target repository are also ignored.<br>If the flag is specified, the default value is true. If the flag is not specified, the default value is false.<br>**Tip:**<br>When using this flag, the user on the server you exported from should also exist on the server to which you are importing. For example, you have "testuser" with access control settings and export the resources with ACL from one server, then import those named resources to another server that does not have "testuser". In this case, named resources will be uploaded but not the ACL.|
+|--a or --acl| No |Preserves any previously exported permissions and merges them with existing permissions when importing resources. An access control list (ACL) indicates the operations each user or role can perform on a named resource, such as create, view, modify, or delete.<br>For example, a user has read and write permissions on a resource when exporting. If the user only has read permissions on the resource when importing, write permission will be granted again after the import finishes successfully.<br>Conflicting permissions cannot be merged and will be ignored. ACL entries for users and roles that do not exist in the target repository are also ignored.<br>If the flag is not specified, then the default value is false.<br>If flag is specified then we must supply the value to be true or false otherwise error will be thrown.<br>Example if flag --a is specified then complete passed parameters should be **--a true** or **--a false**. Otherwise, error will be thrown in command line.<br>**Tip:**<br>When using this flag, the user on the server you exported from should also exist on the server to which you are importing. For example, you have "testuser" with access control settings and export the resources with ACL from one server, then import those named resources to another server that does not have "testuser". In this case, named resources will be uploaded but not the ACL.|
 
 #### Example
 This example imports the named resources from **C:/myrepository/samples** to you spatial repository.
 ```
-limrepo import --s C:/myrepository/samples
+limrepo import --s C:/myrepository/samples --a true
 ```
 
 ### Note
@@ -164,11 +164,11 @@ limrepo import --s C:/myrepository/samples
 
 Correct statement would be
 ```
-limrepo import --s C:/myrepository/samples --u true
+limrepo import --s C:/myrepository/samples --a true --u true
 ```
 or
 ```
-limrepo import --s C:/myrepository/samples --u false
+limrepo import --s C:/myrepository/samples --a true --u false
 ```
 
 Above mentioned instruction for flag needs to be followed for all the given flags **--q, --f, --u, --c, --a** when provided.
