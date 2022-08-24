@@ -24,5 +24,6 @@ To make it easier, this guide is based on AWS CloudShell.
 - Step 5: [Prepare database for repository](prepare-repository-database.md)
 - Step 6: [Deploy spatial services using helm charts](deploy-spatial-services.md)
 - Step 7: [Enabling security - AuthN/AuthZ](enable-security.md)
+- Step 8: [Spatial Utilities](../spatial-utilities.md)
 
 

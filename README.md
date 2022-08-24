@@ -1,7 +1,19 @@
-![Precisely](Precisely_Logo.png "Precisely")
+<h1 align="center">Spatial Analytics</h1>
 
-# Spatial Analytics
-Spatial Analytics is the name for our existing Spectrum Spatial product, designed to deploy to cloud native (Kubernetes) architectures.
+<p align="center">
+  <img src="Precisely_Logo.png" alt="precisely-logo"/>
+  <br>
+  <i>Spatial Analytics is the name for our existing Spectrum Spatial product, designed to deploy to 
+      <br>cloud native (Kubernetes) architectures.</i>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://www.precisely.com"><strong>www.precisely.com</strong></a>
+  <br>
+</p>
+<hr>
+
 
 ## Benefits of cloud native deployment
 ### Flexibility of deployment
@@ -20,4 +32,7 @@ Optimised infrastructure costs: Scale for usage rather than maximum anticipated
 ### Portability
 Can be deployed on premise or to a cloud provider. Portability and flexibility in multi-cloud environments.
 
+## Documentation
 
+- [Getting Started AWS](docs/getting-started/aws-eks/README.md)
+- [Getting Started AZURE](docs/getting-started/azure-aks/README.md)
