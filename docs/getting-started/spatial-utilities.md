@@ -17,7 +17,7 @@ The WMTS Tile Generator is a command-line utility, named tile_builder.bat on Win
 Map Uploader is a tool that copies the properties of the layers in a MapInfo Pro map to a Spectrum Spatial server. It takes the information of one map stored in MapInfo Pro and stores the equivalent information in a set of named resources on the server.
 
 ### [CLI](../spatial-cli/README.md)
-The Spatial CLI Utility provides command line access to connect with Spatial cloud server, export named resources (such as named tables) to you local file system or import them from a local file system to your Spatial cloud server. You can also use it interactively.
+The Spatial CLI Utility provides command line access to connect with Spatial cloud server, export named resources (such as named tables) to your local file system or import them from a local file system to your Spatial cloud server. You can also use it interactively.
 
 
 ### Documentation
