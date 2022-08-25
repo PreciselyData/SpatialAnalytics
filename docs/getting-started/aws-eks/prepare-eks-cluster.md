@@ -5,7 +5,7 @@ Note: an EC2 based EKS cluster is used in this doc. Fargate based EKS may be use
 
 ### Create an Amazon EKS cluster
 
-It's important to choose kubernetes 1.21. Pick up a name and region for your cluster, then create the cluster with cli below (e.g. `spatial-cloud-native`, `us-east-2`). Optionally, you can specify a node type, defaut is `m5.large`.
+It's important to choose kubernetes 1.19+. Pick up a name and region for your cluster, then create the cluster with cli below (e.g. `spatial-cloud-native`, `us-east-2`). Optionally, you can specify a node type, defaut is `m5.large`.
 ```
 eksctl create cluster --version 1.21 --instance-types t3.xlarge --name <cluster name> --region <your region>
 ```
