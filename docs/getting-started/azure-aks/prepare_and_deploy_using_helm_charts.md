@@ -87,7 +87,7 @@ jackrabbit:
 
 ```shell
 helm install spatial spatial/spatial-cloud-native --version 1.0.0-SNAPSHOT \
--f gitlab-deployment-values.yaml \
+-f gitlab-deployment-small-values.yaml \
 -f values-jackrabbit-postgres.yaml \
 --set ingress.host=23-96-127-58.nip.io
 ```
@@ -126,7 +126,7 @@ jackrabbit:
 
 ```shell
 helm install spatial spatial/spatial-cloud-native --version 1.0.0-SNAPSHOT \
--f gitlab-deployment-values.yaml \
+-f gitlab-deployment-small-values.yaml \
 -f values-jackrabbit-sqlserver2019-latest.yaml \
 --set ingress.host=23-96-127-58.nip.io
 ```
