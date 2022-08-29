@@ -12,8 +12,8 @@
 
 ---
 **NOTE**\
-Only supports K8S up to version 1.21. Make sure the correct version is
-defined for cluster creation
+Select K8S version between (1.22.x - 1.23.x). Make sure the correct version is
+defined for cluster creation.
 
 ---
 
@@ -43,7 +43,7 @@ In Azure portal, Create → Create a Kubernetes Cluster
 Create a new Resource group `spatial-aks` for this AKS cluster
 
 Kubernetes cluster name -> `spatial32`\
-Kubernetes version -> `1.21.14`\
+Kubernetes version -> `1.23.8`\
 Node size -> Change size -> F32s_v2\
 Scale method -> `Manual`\
 Node count -> `1`
@@ -131,7 +131,7 @@ kubectl get nodes
 
 ```shell
 NAME                                STATUS   ROLES   AGE    VERSION
-aks-agentpool-39271417-vmss000000   Ready    agent   106s   v1.21.14
+aks-agentpool-39271417-vmss000000   Ready    agent   106s   v1.23.8
 ```
 
 

@@ -1,5 +1,8 @@
-# Getting Started - Spatial Cloud Native: Azure AKS
+<p align="center">
+  <img src="../../../Precisely_Logo.png" alt="precisely-logo"/>
+</p>
 
+<h1 align="center">Getting Started - Spatial Cloud Native: Azure AKS</h1>
 
 ### **Before starting**
 
