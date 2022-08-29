@@ -3,11 +3,11 @@
 
 ##  Setup Helm registry
 
-In Cloud Shell, replace username and password with your helm registry
-tokens in the command below,
+In Cloud Shell, replace `<username>` and `<password>` with your helm registry
+tokens in the command below.
 
 ```shell
-helm repo add spatial https://gitlab.com/api/v4/projects/24255413/packages/helm/stable --username xxxxxxxx --password xxxxxxxx
+helm repo add spatial https://<username>:<password>@gitlab.com/api/v4/projects/24255413/packages/helm/stable
 ```
 
 ```shell
