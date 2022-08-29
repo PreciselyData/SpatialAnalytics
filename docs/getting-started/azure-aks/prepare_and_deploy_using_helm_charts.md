@@ -49,8 +49,7 @@ sh.helm.release.v1.spatial.v1   helm.sh/release.v1                    1      3m2
 
 ##  Deploy Spatial-Cloud-Native Helm chart
 
-In Cloud Shell, replace the postgres credentials in the command below if
-it's different (making sure your current directory is `SpatialAnalytics/deploy`)
+In Cloud Shell, navigate to `~/SpatialAnalytics/deploy` for deployment files.
 
 ```shell
 cd ~/SpatialAnalytics/deploy
@@ -69,8 +68,7 @@ we will use `EXTERNAL-IP=23.96.127.58` for creating `ingress.host` -> `23-96-127
 
 There are two deployment files to choose from that require different amount of resources (CPU and Memory). 
 Start from the small one `~/SpatialAnalytics/deploy/gitlab-deployment-small-values.yaml`. 
-A production deployment should use `~/SpatialAnalytics/deploy/gitlab-deployment-values.yaml`. 
-If you use your external Postgres Database, update the information in the manifest file `~/SpatialAnalytics/deploy/values-jackrabbit-postgres.yaml`.
+A production deployment should use `~/SpatialAnalytics/deploy/gitlab-deployment-values.yaml`.
 
 #### Deployment helm using PostgresSQL DB
 
