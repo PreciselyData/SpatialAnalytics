@@ -7,7 +7,7 @@ In Cloud Shell, replace `<username>` and `<password>` with your helm registry
 tokens in the command below.
 
 ```shell
-helm repo add spatial https://<username>:<password>@gitlab.com/api/v4/projects/24255413/packages/helm/stable
+helm repo add spatial https://gitlab.com/api/v4/projects/24255413/packages/helm/stable --username <username> --password <password>
 ```
 
 ```shell
@@ -67,6 +67,11 @@ ingress-nginx-controller-admission   ClusterIP      10.0.134.147   <none>       
 
 we will use `EXTERNAL-IP=23.96.127.58` for creating `ingress.host` -> `23-96-127-58.nip.io`
 
+There are two deployment files to choose from that require different amount of resources (CPU and Memory). 
+Start from the small one `~/SpatialAnalytics/deploy/gitlab-deployment-small-values.yaml`. 
+A production deployment should use `~/SpatialAnalytics/deploy/gitlab-deployment-values.yaml`. 
+If you use your external Postgres Database, update the information in the manifest file `~/SpatialAnalytics/deploy/values-jackrabbit-postgres.yaml`.
+
 #### Deployment helm using PostgresSQL DB
 
 Edit the `values-jackrabbit-postgres.yaml` to reflect the database
@@ -86,6 +91,19 @@ helm install spatial spatial/spatial-cloud-native --version 1.0.0-SNAPSHOT \
 -f values-jackrabbit-postgres.yaml \
 --set ingress.host=23-96-127-58.nip.io
 ```
+
+---
+**NOTE** If you encounter `Error: failed to download "spatial/spatial-cloud-native" at version "1.0.0-SNAPSHOT" (hint: running `helm repo update` may help)`
+
+Please try updating your spatial helm using alternate `URL` format before trying to install again:
+
+```shell
+helm repo remove spatial
+helm repo add spatial https://<username>:<password>@gitlab.com/api/v4/projects/24255413/packages/helm/stable
+helm repo update
+```
+
+---
 
 #### Deployment helm using SQL DB
 
@@ -112,15 +130,27 @@ helm install spatial spatial/spatial-cloud-native --version 1.0.0-SNAPSHOT \
 -f values-jackrabbit-sqlserver2019-latest.yaml \
 --set ingress.host=23-96-127-58.nip.io
 ```
+---
+**NOTE** If you encounter `Error: failed to download "spatial/spatial-cloud-native" at version "1.0.0-SNAPSHOT" (hint: running `helm repo update` may help)`
+
+Please try updating your spatial helm using alternate `URL` format before trying to install again:
+
+```shell
+helm repo remove spatial
+helm repo add spatial https://<username>:<password>@gitlab.com/api/v4/projects/24255413/packages/helm/stable
+helm repo update
+```
 
 ---
-**NOTE** You can uninstall all services if you want to re-install
+
+### Uninstall Spatial Services
+
+You can uninstall all services if you want to re-install
 
 ```shell
 helm uninstall spatial
 ```
 
----
 
 \
 \
