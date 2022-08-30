@@ -151,13 +151,16 @@ helm uninstall spatial
 
 
 \
-\
 By default, the auto-scaling (HPA) is disabled. You can experiment
 auto-scaling by enabling HPA settings in
 `gitlab-deployment-values.yaml`. You can also make more customization to
 the deployment. Updating the manifest file
 `gitlab-deployment-values.yaml` from your disk of Cloud Shell, click
 \'{}\' to open the editor.
+
+
+\
+If you are using the OGC services please refer to the on-premise docs ([WFS](https://docs.precisely.com/docs/sftw/spectrum/22.1/en/webhelp/Spatial/Spatial/source/Resources/resources/repoman/wfs_settings.html), [WMS](https://docs.precisely.com/docs/sftw/spectrum/22.1/en/webhelp/Spatial/Spatial/source/Resources/resources/repoman/wms_settings.html), [WMTS](https://docs.precisely.com/docs/sftw/spectrum/22.1/en/webhelp/Spatial/Spatial/source/Resources/resources/repoman/wmts_settings.html)) to configure the Online resource / Service URL with the public access url (Ingress EXTERNAL-IP).
 \
 \
 \
