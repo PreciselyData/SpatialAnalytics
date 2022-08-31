@@ -1,4 +1,4 @@
-# Step 5: Verify Deployment
+# Verify Deployment
 
 **5. Verify the deployment** You can send any REST request to the
 services through a web browser to verify if the services are working

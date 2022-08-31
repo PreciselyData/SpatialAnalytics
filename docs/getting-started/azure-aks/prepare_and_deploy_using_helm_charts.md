@@ -1,4 +1,4 @@
-# Step 4: Prepare and deploy using helm charts
+# Prepare and deploy using helm charts
 
 
 ##  Setup Helm registry

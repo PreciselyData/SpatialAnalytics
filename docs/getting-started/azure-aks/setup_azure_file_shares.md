@@ -1,4 +1,4 @@
-# Step 3: Setup Azure File shares
+# Setup Azure File shares
 
 
 By default, Azure File shares use SMB protocol that doesn't perform

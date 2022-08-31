@@ -1,4 +1,4 @@
-# Cloud Native : Step 1: Create a database
+# Create a database
 
 
 Spatial in azure supports both PostgresSQL and SQL servers. Based on
