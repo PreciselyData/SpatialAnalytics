@@ -1,4 +1,4 @@
-# Step 4: Create PersistentVolume (PV) and PersistentVolumeClaim (PVC)
+# Create PersistentVolume (PV) and PersistentVolumeClaim (PVC)
 
 In Cloud Shell, clone SpatialAnalytics repository.
 

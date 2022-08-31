@@ -1,4 +1,4 @@
-# Step 2: Prepare AKS cluster
+# Prepare AKS cluster
 
 -   [2.1 Create an AKS cluster](#Step2:PrepareAKScluster-2.1CreateanAKScluster)
 -   [2.2 Connect from Cloud Shell VM to the AKS

@@ -1,4 +1,4 @@
-# Step 7: Enabling security AKS - AuthN/AuthZ
+# Enabling security AKS - AuthN/AuthZ
 
 A Keycloak (18.0.0+) is used for authentication and authorization. If
 you have an external Keycloak instance that can be accessed from inside
