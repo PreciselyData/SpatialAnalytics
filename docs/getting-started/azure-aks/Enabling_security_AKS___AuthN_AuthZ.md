@@ -34,7 +34,7 @@ e.g. 23.96.127.58 → 23-96-127-58.nip.io
 ### Deploy keycloak by helm chart
 
 ```
-helm install keycloak spatial/keycloak-service --version 1.0.0-SNAPSHOT -n keycloak --set ingress.host=23-96-127-58.nip.io
+helm install keycloak spatial/keycloak-service --version 1.0.0 -n keycloak --set ingress.host=23-96-127-58.nip.io
 ```
 ```shell
 NAME: keycloak

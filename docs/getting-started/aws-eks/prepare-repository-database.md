@@ -6,7 +6,7 @@ A Database (PostgreSQL or MSSQL Server) instance is used to persistent repositor
 
 Install postgres (reference to [Setup helm repository](deploy-spatial-services.md) in Step 6)
 ```
-helm install postgis spatial/postgis-standalone --version 1.0.0-SNAPSHOT -n spatial
+helm install postgis spatial/postgis-standalone --version 1.0.0 -n spatial
 ```
 
 This will install a postgre single node instance with the following information (default)

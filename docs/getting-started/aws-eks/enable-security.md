@@ -20,7 +20,7 @@ e.g. `af5fd6acf60f747e492756edb9726215-e6f65bc2cad48f48.elb.us-east-2.amazonaws.
 
 ### Deploy keycloak by helm chart
 ```
-helm install keycloak spatial/keycloak-service --version 1.0.0-SNAPSHOT -n keycloak --set ingress.host=<your external ip>
+helm install keycloak spatial/keycloak-service --version 1.0.0 -n keycloak --set ingress.host=<your external ip>
 ```
 Wait until `keycloak-0` pod in `keycloak` namespace is up and ready (`kubectl get pod -n keycloak`)
 

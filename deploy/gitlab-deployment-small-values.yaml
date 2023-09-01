@@ -18,7 +18,7 @@ feature-service:
   hpaCpuAverageUtilization: 3000
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/feature-service
-    tag: 1.0-SNAPSHOT
+    tag: 1.0.0
     secrets: regcred-gitlab
 
 mapping-service:
@@ -31,7 +31,7 @@ mapping-service:
   hpaCpuAverageUtilization: 3000
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/mapping-service
-    tag: 1.0-SNAPSHOT
+    tag: 1.0.0
     secrets: regcred-gitlab
   
 namedresource-service:
@@ -44,7 +44,7 @@ namedresource-service:
   hpaCpuAverageUtilization: 3000
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/namedresource-service
-    tag: 1.0-SNAPSHOT
+    tag: 1.0.0
     secrets: regcred-gitlab
 
 tiling-service:
@@ -57,7 +57,7 @@ tiling-service:
   hpaCpuAverageUtilization: 3000
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/tiling-service
-    tag: 1.0-SNAPSHOT
+    tag: 1.0.0
     secrets: regcred-gitlab
 
 repository-service-gold:
@@ -67,7 +67,7 @@ repository-service-gold:
   limitMemory: "2Gi"
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/repository-service
-    tag: 1.0-SNAPSHOT
+    tag: 1.0.0
     secrets: regcred-gitlab
   
 repository-service:
@@ -80,7 +80,7 @@ repository-service:
   hpaCpuAverageUtilization: 3000
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/repository-service
-    tag: 1.0-SNAPSHOT
+    tag: 1.0.0
     secrets: regcred-gitlab
 
 spatialmanager-service:
@@ -92,7 +92,7 @@ spatialmanager-service:
   hpaEnabled: false
   registry:
     url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/spatialmanager-service
-    tag: 1.0-SNAPSHOT
+    tag: 1.0.0
     secrets: regcred-gitlab
 
 # END

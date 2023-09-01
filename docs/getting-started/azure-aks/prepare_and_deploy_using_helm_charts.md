@@ -12,13 +12,13 @@ helm repo add spatial https://gitlab.com/api/v4/projects/24255413/packages/helm/
 
 ```shell
 helm repo update
-helm search repo spatial --devel
+helm search repo spatial
 ```
 
 
-You should be able to see Spatial-Cloud-Native 1.0.0-SNAPSHOT version
+You should be able to see Spatial-Cloud-Native 1.0.0 version
 listed. NAME CHART VERSION\
-spatial/spatial-cloud-native 1.0.0-SNAPSHOT
+spatial/spatial-cloud-native 1.0.0
 
 
 ## Create Docker registry secret
@@ -84,14 +84,14 @@ jackrabbit:
 ```
 
 ```shell
-helm install spatial spatial/spatial-cloud-native --version 1.0.0-SNAPSHOT \
+helm install spatial spatial/spatial-cloud-native --version 1.0.0 \
 -f gitlab-deployment-small-values.yaml \
 -f values-jackrabbit-postgres.yaml \
 --set ingress.host=23-96-127-58.nip.io
 ```
 
 ---
-**NOTE** If you encounter `Error: failed to download "spatial/spatial-cloud-native" at version "1.0.0-SNAPSHOT" (hint: running `helm repo update` may help)`
+**NOTE** If you encounter `Error: failed to download "spatial/spatial-cloud-native" at version "1.0.0" (hint: running `helm repo update` may help)`
 
 Please try updating your spatial helm using alternate `URL` format before trying to install again:
 
@@ -123,13 +123,13 @@ jackrabbit:
 ```
 
 ```shell
-helm install spatial spatial/spatial-cloud-native --version 1.0.0-SNAPSHOT \
+helm install spatial spatial/spatial-cloud-native --version 1.0.0 \
 -f gitlab-deployment-small-values.yaml \
 -f values-jackrabbit-sqlserver2019-latest.yaml \
 --set ingress.host=23-96-127-58.nip.io
 ```
 ---
-**NOTE** If you encounter `Error: failed to download "spatial/spatial-cloud-native" at version "1.0.0-SNAPSHOT" (hint: running `helm repo update` may help)`
+**NOTE** If you encounter `Error: failed to download "spatial/spatial-cloud-native" at version "1.0.0" (hint: running `helm repo update` may help)`
 
 Please try updating your spatial helm using alternate `URL` format before trying to install again:
 
