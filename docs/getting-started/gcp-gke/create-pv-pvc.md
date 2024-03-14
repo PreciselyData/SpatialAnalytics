@@ -1,41 +1,27 @@
 ## Create PV and PVC
 
-### Create a StorageClass for EFS Driver
+A PV (Persistent Volume) is required to share files across all services (pods),
+	File based Spatial data sets, such as Mapinfo TAB, Shape, GeoPackage and Geodatabase etc.
+	Tile cache
+	Map cache
+	Custom Symbols
+	Extended DataProviders
+	JDBC drivers
+	
+### Create a PVC/PV
 
-find the template file `~/SpatialAnalytics/deploy/aws-eks/efs-sc.yaml` and update it with the file system id of your EFS file system
-
-```
-...
-fileSystemId: fs-0a8838e5f81aa5cb3
-...
-```
-```
-kubectl apply -f ~/SpatialAnalytics/deploy/aws-eks/efs-sc.yaml
-```
-Check the results
-```
-kubectl get sc
-```
-The output should look like,
-```
-NAME            PROVISIONER             RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
-efs-sc          efs.csi.aws.com         Delete          Immediate              false                  16s
-```
-
-### Create a PVC
-
-We will deploy spatial services into a new namespace 'spatial', so create the namespace first,
+We will use `standard-rwx` auto provisioner to provision a PV through a PVC. There are other provisioners that may give better overall performance.
 ```
 kubectl create ns spatial
 ```
 
-Create a PVC in the namespace that dynamically provisioning a PV using efs-sc storage class,
+Create a PVC that dynamically provisioning a PV using standard-rwx storage class,
 ```
-kubectl apply -f ~/SpatialAnalytics/deploy/aws-eks/pvc.yaml -n spatial
+kubectl apply -f ~/SpatialAnalytics/deploy/gcp-gke/pvc.yaml
 ```
-Check results, wait until the pvc status becomes `Bound`.
+Check results, the pvc status will become `Bound` after service pods are deployed.
 ```
-kubectl get pvc -n spatial
+kubectl get pvc
 ```
 
 ### [Next Step](prepare-repository-database.md)

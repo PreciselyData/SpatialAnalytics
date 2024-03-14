@@ -1,6 +1,6 @@
-## Setup AWS CloudShell
+## Setup Google CloudShell
 
-Login to Google Clooud Console
+Login to Google Cloud Console
 
 Ensure you are in the right project
 

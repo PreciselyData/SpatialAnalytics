@@ -1,6 +1,6 @@
 ## Prepare database for repository
 
-A Database (PostgreSQL or MSSQL Server) instance is used to persistent repository content. If you have an external instance available, just collect the connection string and credentials for further use. You can also follow the steps below to install a postgres database to the GKE cluster. For the performance reason, keep the database instance as close to the cluster as possible.
+A MongoDB replica set is used to persistent repository content. You can follow the steps below to install one to the GKE cluster. It is a single node replica set, can only be used to experiment features. Please follow the MongoDB document to install a product-ready replica set for prodcution deployment.
 
 ### Setup helm repository
 
@@ -20,25 +20,23 @@ Create a secret for image pull (using the same credentials)
 kubectl -n spatial create secret docker-registry regcred-gitlab --docker-server=registry.gitlab.com --docker-username=<username> --docker-password=<password>
 ```
 
-### Install a postgres database instance by helm
+### Install a MongoDB instance by helm
 
-Install postgres pod from helm chart
+Install MongoDB pod from helm chart
 ```
-helm install postgis spatial/postgis-standalone --version 1.0.0 -n spatial
+helm install postgis spatial/mongo-standalone --version 1.0.0
 ```
 ```
 kubectl get pod
 ```
-Wait until the postgis pod is ready
+Wait until the mongo pod is ready
 ```
 NAME                                      READY   STATUS    RESTARTS   AGE
-postgis                                   1/1     Running   0          8m35s
+mongo                                     1/1     Running   0          8m35s
 ```
-This will install a postgre single node instance with the following information (default)
+This will install a single node replica set instance without authentication
 ```
-connection uri = jdbc:postgresql://postgis:5432/jackrabbit_db?currentSchema=public
-username: "jackrabbit_user"
-password: "jackrabbit_user"
+connection uri = mongodb://mongo:27017/
 ```
 
 ### [Next Step](deploy-spatial-services.md)

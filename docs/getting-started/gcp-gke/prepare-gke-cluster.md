@@ -20,7 +20,7 @@ gcloud config list
 
 Create GKE cluster (autopilot) named spatial-cloud-native
 ```
-gcloud container clusters create-auto spatial-cloud-native
+gcloud container clusters create-auto spatial-cloud-native --project my-project --region us-east1 --cluster-version 1.29.0
 ```
 It may take few minutes to create the cluster. Wait until the command finished.
 ```
@@ -32,15 +32,15 @@ No resources found
 ```
 
 ### Install Ingress Controller (nginx)
-First, your user needs to have cluster-admin permissions on the cluster. This can be done with the following command:
+First, add cluster admin permission:
 ```
 kubectl create clusterrolebinding cluster-admin-binding \
   --clusterrole cluster-admin \
   --user $(gcloud config get-value account)
 ```
-Then, the ingress controller can be installed like this:
+Then, install ingress controller:
 ```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.0/deploy/static/provider/cloud/deploy.yaml
 ```
 Find the external IP
 ```
@@ -57,4 +57,4 @@ The public access url would be like below. Try the url from your browser, you sh
 https://34.23.192.143
 ```
 
-### [Next Step](setup-efs-file-shares.md)
+### [Next Step](create-pv-pvc.md)

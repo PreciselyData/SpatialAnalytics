@@ -1,6 +1,6 @@
 ## Enabling security - AuthN/AuthZ
 
-A `Keycloak` (18.0.0+) is used for authentication and authorization. If you have an external Keycloak instance that can be accessed from inside the EKS cluster, then collect the issuer url for further service config, otherwise, you can deploy a keycloak service into the EKS cluster.
+A `Keycloak` (18.0.0+) is used for authentication and authorization. You need an external Keycloak instance that can be accessed from inside the GKE cluster, then collect the issuer url for further service config, otherwise, you can deploy a keycloak service into the EKS cluster.
 
 
 ### Deploy a Keycloak service into the EKS cluster.
@@ -68,11 +68,11 @@ spring.security.oauth2.resourceserver.jwt.issuer-uri: "http://keycloak-discovery
 
 Restart all services to pick up the configuration changes
 ```
-kubectl rollout restart deployment -n spatial
+kubectl rollout restart deployment
 ```
 Wait for all pods are ready
 ```
-kubectl get pod -n spatial
+kubectl get pod
 ```
 
 Login to Spatial Manager when all services are ready. Initial password for `admin` is `Spatialadmin0`
