@@ -11,9 +11,6 @@ A PV (Persistent Volume) is required to share files across all services (pods),
 ### Create a PVC/PV
 
 We will use `standard-rwx` auto provisioner to provision a PV through a PVC. There are other provisioners that may give better overall performance.
-```
-kubectl create ns spatial
-```
 
 Create a PVC that dynamically provisioning a PV using standard-rwx storage class,
 ```

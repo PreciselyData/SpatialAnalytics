@@ -24,7 +24,7 @@ kubectl -n spatial create secret docker-registry regcred-gitlab --docker-server=
 
 Install MongoDB pod from helm chart
 ```
-helm install postgis spatial/mongo-standalone --version 1.0.0
+helm install mongo spatial/mongo-standalone --version 1.0.0
 ```
 ```
 kubectl get pod
