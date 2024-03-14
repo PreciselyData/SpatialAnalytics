@@ -1,0 +1,193 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spatial-service
+  annotations:
+    # If the class annotation is not specified it defaults to "gce".
+    kubernetes.io/ingress.class: "gce"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /rest/Spatial/WMS
+        pathType: Prefix
+        backend:
+          service:
+            name: mapping-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/MappingService
+        pathType: Prefix
+        backend:
+          service:
+            name: mapping-service
+            port:
+              number: 8080
+      - path: /soap/MappingService
+        pathType: Prefix
+        backend:
+          service:
+            name: mapping-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/WFS
+        pathType: Prefix
+        backend:
+          service:
+            name: feature-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/FeatureService
+        pathType: Prefix
+        backend:
+          service:
+            name: feature-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/DataService
+        pathType: Prefix
+        backend:
+          service:
+            name: feature-service
+            port:
+              number: 8080
+      - path: /soap/FeatureService
+        pathType: Prefix
+        backend:
+          service:
+            name: feature-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/WMTS
+        pathType: Prefix
+        backend:
+          service:
+            name: tiling-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/MapTilingService
+        pathType: Prefix
+        backend:
+          service:
+            name: tiling-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/NamedResourceService
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/ProjectService
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/MIProAddinService
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/AccessControlService
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/GeometryService
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /soap/NamedResourceService
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /soap/GeometryService
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /security
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /oauth2
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /login
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /logout
+        pathType: Prefix
+        backend:
+          service:
+            name: namedresource-service
+            port:
+              number: 8080
+      - path: /SpatialServerManager
+        pathType: Prefix
+        backend:
+          service:
+            name: ssm-service
+            port:
+              number: 8080
+      - path: /managers
+        pathType: Prefix
+        backend:
+          service:
+            name: ssm-service
+            port:
+              number: 8080
+      - path: /help
+        pathType: Prefix
+        backend:
+          service:
+            name: ssm-service
+            port:
+              number: 8080
+      - path: /rest/Spatial/NamedResourceService/internal/resources/analystConfig
+        pathType: Prefix
+        backend:
+          service:
+            name: ssm-service
+            port:
+              number: 8080
+---
+apiVersion: cloud.google.com/v1
+kind: BackendConfig
+metadata:
+  name: ingress-backendconfig
+spec:
+  healthCheck:
+    checkIntervalSec: 10
+    timeoutSec: 2
+    healthyThreshold: 1
+    unhealthyThreshold: 3
+    type: HTTP
+    requestPath: /actuator/health/readiness
+    port: 8081

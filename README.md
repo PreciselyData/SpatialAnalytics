@@ -36,3 +36,4 @@ Can be deployed on premise or to a cloud provider. Portability and flexibility 
 
 - [Getting Started AWS](docs/getting-started/aws-eks/README.md)
 - [Getting Started AZURE](docs/getting-started/azure-aks/README.md)
+- [Getting Started Google Cloud](docs/getting-started/gcp-gke/README.md)
