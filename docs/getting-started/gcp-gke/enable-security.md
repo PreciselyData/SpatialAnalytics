@@ -1,12 +1,12 @@
 ## Enabling security - AuthN/AuthZ
 
 A `Keycloak` (18.0.0+) is used for authentication and authorization. 
-	- Authenticate a user
-	- Issue JWT token for an authenticated user
-	- Verify the JWT token used in a service request
-	- Resource based authorization
-	- Manage users(realm)/roles(client)
-	- Federate with other IDPs
+- Authenticate a user
+- Issue JWT token for an authenticated user
+- Verify the JWT token used in a service request
+- Resource based authorization
+- Manage users(realm)/roles(client)
+- Federate with other IDPs
 
 General service flow,
 
