@@ -22,6 +22,9 @@ kubectl -n spatial create secret docker-registry regcred-gitlab --docker-server=
 ### Deploy Spatial Services
 
 There are two deployment files to choose from that require different amount of resources (CPU and Memory). Start from the small one (`~/SpatialAnalytics/deploy/gitlab-deployment-small-values.yaml`). A production deployment should use `~/SpatialAnalytics/deploy/gitlab-deployment-values.yaml`.
+
+Note: if you are not using MongoDB deployed from this guide, you need to update the mongo uri before install.
+
 ```
 helm install spatial spatial/spatial-cloud-native --version 1.0.0 -f ~/SpatialAnalytics/deploy/gitlab-deployment-small-values.yaml
 ```

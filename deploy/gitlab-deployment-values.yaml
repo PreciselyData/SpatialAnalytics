@@ -6,6 +6,10 @@
 global:
   ingress:
     host: 
+
+repository:
+  mongodb:
+    url: "mongodb://mongo-svc.mongo.svc.cluster.local/spatial-repository?authSource=admin&ssl=false"
  
 # Individual service overrides
 feature-service:
