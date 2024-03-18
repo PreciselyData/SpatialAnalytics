@@ -9,9 +9,9 @@
 
 Make sure you have the following items before starting:
 
-    Google Cloud account, 
-	A project that IAM has role of Kubernetes Engine Admin (roles/container.admin), or Owner (roles/owner)
-    Cloud Shell
+- Google Cloud account
+- A project that IAM has role of Kubernetes Engine Admin (roles/container.admin), or Owner (roles/owner)
+- Cloud Shell
 
 To make it easier, this guide is based on Cloud Shell. Please also note that this guide is to help you experiment the features of Spatial Cloud Native. The steps should not be considered as a production-ready deployment. 
 
