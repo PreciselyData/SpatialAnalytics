@@ -20,7 +20,7 @@ Wait until all services are ready. It may take 5 to 8 minutes to get ready for t
 kubectl get pod
 ```
 
-You can also deploy services with hpa enabled, here is an example (check [gitlab-deployment-values.yaml](~/SpatialAnalytics/deploy/gitlab-deployment-values.yaml) for more details),
+You can also deploy services with hpa enabled, here is an example (check [gitlab-deployment-values.yaml](../../../deploy/gitlab-deployment-values.yaml) for more details),
 ```
 helm install spatial ~/SpatialAnalytics/charts/spatial-cloud-native-1.1.0.tgz -f ~/SpatialAnalytics/deploy/gitlab-deployment-values.yaml --set mapping-service.hpaEnabled=true --set mapping-service.maxReplicaCount=3
 ```
