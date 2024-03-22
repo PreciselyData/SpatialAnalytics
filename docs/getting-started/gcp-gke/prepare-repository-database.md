@@ -5,15 +5,15 @@ A MongoDB replica set is used to persistent repository content.
 For a production deployment, a multi-node MongoDB replica set is recommended. Here is the link to [Install MongoDB](https://www.mongodb.com/docs/manual/installation/)
 
 
-If you have a MongoDB replica set that can be accessed from inside the Kubernetes cluster, then collect the connection url for further service config.
+If you have a MongoDB replica set that can be accessed from inside the Kubernetes cluster, then collect the connection uri for further service config.
 
-If you don't have a MongoDB replica set currently, for your convenience, you can deploy a single node MongoDB replica set for testing by the first step below, otherwise, go to the next step.
+If you don't have a MongoDB replica set currently, for your convenience, you can deploy a single node MongoDB replica set for testing as below, otherwise, go to the next step.
 
 ### Install a MongoDB instance by helm for testing
 
 Install MongoDB from helm chart
 ```
-helm install mongo charts/mongo-standalone -n mongo --create-namespace
+helm install mongo ~/SpatialAnalytics/charts/mongo-standalone -n mongo --create-namespace
 ```
 ```
 kubectl get pod -n mongo

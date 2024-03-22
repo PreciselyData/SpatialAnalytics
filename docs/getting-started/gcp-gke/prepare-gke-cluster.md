@@ -11,16 +11,16 @@ gcloud config set compute/region us-east1
 ```
 The project should be set automatically, but you can update it if needed,
 ```
-gcloud config set project my-project
+gcloud config set project <my-project>
 ```
 Check the settings,
 ```
 gcloud config list
 ```
 
-Create GKE cluster (autopilot) named spatial-cloud-native
+Create GKE cluster (autopilot) named spatial-cloud-native. You can specify different project and region with `--project` and `--region`.
 ```
-gcloud container clusters create-auto spatial-cloud-native --project my-project --region us-east1 --cluster-version 1.29.0
+gcloud container clusters create-auto spatial-cloud-native --region us-east1 --cluster-version 1.29.1
 ```
 It may take few minutes to create the cluster. Wait until the command finished.
 ```
@@ -30,8 +30,12 @@ You may see no resources at beginning as no pods deployed yet.
 ```
 No resources found
 ```
+Note: if the cluster version was not found, using the following command to list all valid cluster versions. Looking for one under REGULAR channel.
+```
+gcloud container get-server-config
+```
 
-### Install Ingress Controller (nginx)
+### Install Ingress Controller (ingress-nginx)
 First, add cluster admin permission:
 ```
 kubectl create clusterrolebinding cluster-admin-binding \
@@ -56,5 +60,13 @@ The public access url would be like below. Try the url from your browser, you sh
 ```
 https://34.23.192.143
 ```
+
+### Delete the GKE cluster
+Once you finished the testing, if you do not want this cluster anymore, you can delete the cluster for cost saving,
+```
+gcloud container clusters delete spatial-cloud-native --region us-east1
+```
+verify and answer 'Y' to delete the cluster.
+
 
 ### [Next Step](create-pv-pvc.md)

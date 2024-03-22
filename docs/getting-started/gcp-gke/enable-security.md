@@ -29,13 +29,14 @@ kubectl get svc -n ingress-nginx
 looking for the EXTERNAL-IP in the output for the value of `hostname` used in the next command.
 
 ```
-helm install keycloak charts/keycloak-standalone -n keycloak --create-namespace --set hostname=<ingress external ip> 
+helm install keycloak ~/SpatialAnalytics/charts/keycloak-standalone -n keycloak --create-namespace --set hostname=<ingress external ip> 
 ```
-Wait until `keycloak` pod is up and ready (`kubectl get pod -n keycloak`)
+Wait until `keycloak` pod is up and ready (`kubectl get pod -n keycloak`). It may take some time for Ingress to be deployed.
     
 Open a browser and login to keycloak console with the admin credentials (default to admin/admin) at
 `http://<ingress external ip>/auth`
 
+Note: this keycloak server is running in DEV mode, only use HTTP to login to admin-console.
 
 ### Create a realm for spatial services
 
@@ -44,7 +45,7 @@ SCN has a realm template (realm-spatial.json) that helps to setup the required r
 Download `~/SpatialAnalytics/deploy/realm-spatial.json` to your local system.
 In the administration console, click on realm pulldown menu and select `Create realm`
 
-Click on `Browse...` button, select the realm file `realm-spatial.json`, give a name to the new realm (use all lowercase name, e.g. `development`) and click the `Create`.
+Click on `Browse...` button, select the realm file `realm-spatial.json`, give a name to the new realm (use all lowercase name, e.g. `development`) and click the `Create` (do not double clicks).
 
 After imported the realm from the template, use Keycloak Admin console to change admin ccredentials, default user credentials and spatial client secret. 
 

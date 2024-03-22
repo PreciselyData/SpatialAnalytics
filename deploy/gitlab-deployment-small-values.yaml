@@ -21,8 +21,8 @@ feature-service:
   hpaEnabled: false
   hpaCpuAverageUtilization: 3000
   registry:
-    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/feature-service
-    tag: 1.0.0
+    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework
+    tag: latest
     secrets: regcred-gitlab
 
 mapping-service:
@@ -34,8 +34,8 @@ mapping-service:
   hpaEnabled: false
   hpaCpuAverageUtilization: 3000
   registry:
-    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/mapping-service
-    tag: 1.0.0
+    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework
+    tag: latest
     secrets: regcred-gitlab
   
 namedresource-service:
@@ -47,8 +47,8 @@ namedresource-service:
   hpaEnabled: false
   hpaCpuAverageUtilization: 3000
   registry:
-    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/namedresource-service
-    tag: 1.0.0
+    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework
+    tag: latest
     secrets: regcred-gitlab
 
 tiling-service:
@@ -60,33 +60,10 @@ tiling-service:
   hpaEnabled: false
   hpaCpuAverageUtilization: 3000
   registry:
-    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/tiling-service
-    tag: 1.0.0
-    secrets: regcred-gitlab
-
-repository-service-gold:
-  requestCPU: "100m"
-  limitCPU: "4"
-  requestMemory: "2Gi"
-  limitMemory: "2Gi"
-  registry:
-    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/repository-service
-    tag: 1.0.0
+    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework
+    tag: latest
     secrets: regcred-gitlab
   
-repository-service:
-  requestCPU: "500m"
-  limitCPU: null
-  requestMemory: "2Gi"
-  limitMemory: "2Gi"
-  initReplicaCount: 1
-  hpaEnabled: false
-  hpaCpuAverageUtilization: 3000
-  registry:
-    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/repository-service
-    tag: 1.0.0
-    secrets: regcred-gitlab
-
 spatialmanager-service:
   requestCPU: "100m"
   limitCPU: "4"
@@ -95,8 +72,8 @@ spatialmanager-service:
   initReplicaCount: 1
   hpaEnabled: false
   registry:
-    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework/spatialmanager-service
-    tag: 1.0.0
+    url: registry.gitlab.com/preciselydata/location-intelligence/spatial/spatial-web-framework
+    tag: latest
     secrets: regcred-gitlab
 
 # END

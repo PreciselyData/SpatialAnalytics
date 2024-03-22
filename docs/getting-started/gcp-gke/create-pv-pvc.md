@@ -1,12 +1,12 @@
 ## Create PV and PVC
 
 A PV (Persistent Volume) is required to share files across all services (pods),
-	File based Spatial data sets, such as Mapinfo TAB, Shape, GeoPackage and Geodatabase etc.
-	Tile cache
-	Map cache
-	Custom Symbols
-	Extended DataProviders
-	JDBC drivers
+- File based Spatial data sets, such as Mapinfo TAB, Shape, GeoPackage and Geodatabase etc.
+- Tile cache
+- Map image cache
+- Custom Symbols
+- Extended DataProviders
+- JDBC drivers
 	
 ### Create a PVC/PV
 
